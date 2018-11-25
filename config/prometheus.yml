@@ -1,0 +1,6 @@
+scrape_configs:
+  - job_name: probot
+    metrics_path: /probot/metrics
+    static_configs:
+      - targets:
+        - 'leopoppy-probot.herokuapp.com'
