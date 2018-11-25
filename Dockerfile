@@ -11,3 +11,4 @@ ADD config/prometheus.yml /etc/prometheus/
 ADD src/entrypoint.sh /bin/entrypoint.sh
 
 ENTRYPOINT [ "/bin/entrypoint.sh" ]
+CMD        [ "--debug" ]
