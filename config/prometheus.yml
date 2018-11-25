@@ -3,4 +3,4 @@ scrape_configs:
     metrics_path: /probot/metrics
     static_configs:
       - targets:
-        - 'leopoppy-probot.herokuapp.com'
+        - '{{PROBOT_HOST}}'
