@@ -485,8 +485,8 @@
     "list": []
   },
   "time": {
-    "from": "now-1h",
-    "to": "now"
+    "from": "now/w",
+    "to": "now/w"
   },
   "timepicker": {
     "refresh_intervals": [
