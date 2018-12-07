@@ -156,7 +156,7 @@
       "tableColumn": "Value",
       "targets": [
         {
-          "expr": "sum(builds_duration_ms_count{check_run_conclusion=\"failure\"})/sum(builds_duration_ms_count)*100",
+          "expr": "(sum(builds_duration_ms_count{check_run_conclusion=\"failure\"}) or (1-sum(absent(builds_duration_ms_count{check_run_conclusion=\"failure\"}))))/sum(builds_duration_ms_count)*100",
           "format": "time_series",
           "hide": false,
           "instant": true,
@@ -427,7 +427,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "(1-sum(builds_duration_ms_count{check_run_conclusion=\"failure\"})/sum(builds_duration_ms_count))*100",
+          "expr": "(1-(sum(builds_duration_ms_count{check_run_conclusion=\"failure\"}) or (1-absent(sum(builds_duration_ms_count{check_run_conclusion=\"failure\"}))))/sum(builds_duration_ms_count))*100",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -516,5 +516,5 @@
   "timezone": "",
   "title": "Travis Build Stats",
   "uid": "ueZ4JvLik",
-  "version": 37
+  "version": 39
 }
