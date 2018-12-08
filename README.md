@@ -28,6 +28,10 @@ script/server_local.sh
 ### Publish
 - Run `script/publish.sh`
 
+### Demo Scraper
+
+Setup a demo scraper with Probot following [these steps](WEB1066-probot-prom.md).
+
 ## Contributing
 
 If you have suggestions for how this project could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
