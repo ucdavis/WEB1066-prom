@@ -61,6 +61,13 @@ Setup the Prometheus scraper with `prom-client` from https://github.com/siimon/p
   const Registry = client.Registry
   const register = new Registry()
   const collectDefaultMetrics = client.collectDefaultMetrics
+  
+  // Probe every 5th second.
+
+  collectDefaultMetrics({register,
+    timeout: 5000,
+    prefix: 'default_'
+  })
 ```
 
 ## 5. Setup The Summary Metric Type
